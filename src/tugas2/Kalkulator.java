@@ -45,6 +45,7 @@ class CodeExit
 /***************************** Main Class *******************************/
 public class Kalkulator {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 
 		/** clear Screen **/
@@ -72,52 +73,27 @@ public class Kalkulator {
 	    	}
 	    	
 	    	boolean check = false;
-	    	while(check == false) {
+	    	while(check == false) { //melakukan perulangan kalau kondisi terpenuhi
 	    		String errorMessage = "";
 	    		try {
 	    		Scanner scan1 = new Scanner(System.in);
 	    		System.out.print("Masukan nilai 1 yang akan dihitung  : ");
 	    		nilai1 = scan1.nextDouble();
-//	    		Scanner scan2 = new Scanner(System.in);
+	    		//Scanner scan2 = new Scanner(System.in);
 	    		System.out.print("Masukan nilai 2 yang akan dihitung  : ");
 	    		nilai2 = scan1.nextDouble();
 		    	}
 		    	catch (Exception e1) {
 					errorMessage = e1.toString();
 					System.out.print((char)27+"[01;31m \nERROR, MASUKAN ANGKA!\n\n"+(char)27+"[00;00m");
-//					System.out.println(errorMessage);
-//					System.out.print("\nERROR, MASUKAN ANGKA\n");
+					//System.out.println(errorMessage);
 				}
 	    		if(errorMessage.isEmpty()) {
 	    			check = true;
 	    		}else {
 	    			check = false;
 	    		}
-	    		
 	    	}
-	    			
-	    	
-//	    	catch (NumberFormatException e)  
-//			{ 
-//				System.out.println(" is not a valid integer"); 
-//			}
-	    	
-//	    	boolean checkInput = false;
-//	    	while(checkInput) {
-//	    		System.out.print("checkInput ==> " +checkInput);
-//	   	      	try {
-//	   	      		System.out.print("Masukan nilai 1 yang akan dihitung  : ");
-//	   	      		nilai1 = sc.nextDouble();
-//	   	      		System.out.print("Masukan nilai 2 yang akan dihitung  : ");
-//	   	      		nilai2 = sc.nextDouble();
-	   	      		
-//	   	      		} catch (NumberFormatException  e) {
-//					  e.printStackTrace();
-//					  System.out.print("\nHarap Masukan Angka\n");
-//					  sc.nextLine();
-//					  System.out.print("\033[H\033[2J");
-//					  }
-//	    	}
 	    	
 	   	    switch(pilih) {
 	   	    	case 1:
@@ -153,10 +129,6 @@ public class Kalkulator {
 					System.out.println("Hasil Persen  : " +hasil+ "%");
 					break;		
 				}//tutup switch case
-//	   	    	System.out.print("\nklik enter");
-//	   	    	sc.nextLine();
-//   	     System.out.print("\033[H\033[2J");
-//   	     mm.menu();
 	    }//tutup while
 	}//tutup main 
 }
