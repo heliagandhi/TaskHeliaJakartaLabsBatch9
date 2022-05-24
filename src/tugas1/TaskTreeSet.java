@@ -1,4 +1,4 @@
-package pertemuan1;
+package tugas1;
 
 import java.util.Iterator;
 import java.util.TreeSet;
